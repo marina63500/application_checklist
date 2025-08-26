@@ -1,0 +1,57 @@
+#root {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 2rem;
+  text-align: center;
+}
+
+
+
+.task-list{
+  margin-top: 2rem;
+  text-align: center;
+  background: rgb(40, 114, 164);
+  border-radius: 8px;
+  padding: 1rem;
+  font-weight: bold;
+  color:azure
+}
+
+input[type="text"] {
+  padding: 0.5rem;
+  width: 60%;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  margin-bottom: 1rem;
+}
+
+input[type="checkbox"] {
+  margin-right: 0.5rem;
+}
+
+.task-list ul{
+  list-style: none;
+  padding: 0.5rem 0;
+  margin: 0;
+}
+
+.task-list li {
+  display: flex;
+  align-items: center;  /* aligne verticalement la checkbox et le texte */
+  gap: 0.5rem; /* espace entre la checkbox et le texte */
+  margin-bottom: 0.5rem;
+  font-size: 1.2rem; 
+}
+
+.done {
+  text-decoration: line-through;  /* barre le texte  */
+  color: gray;
+}
+
+.btn {
+  background-color: greenyellow; 
+  border: none;
+  padding: 1rem;
+  border-radius: 4px;
+  cursor: pointer;
+}
