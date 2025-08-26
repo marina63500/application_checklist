@@ -1,4 +1,5 @@
 import {useState} from 'react'
+import RemoveTask from './RemoveTask.jsx'
 
 
 
@@ -14,6 +15,7 @@ export function TaskList() {
     
 
   // Fonction pour marquer comme terminée
+  // coche ou décoche une tâche
   const toggleTask = (index) => {
     const updatedTasks = tasks.map((task, i) =>
       i === index ? { ...task, done: !task.done } : task
@@ -52,7 +54,7 @@ export function TaskList() {
                             checked={task.done}
                             onChange={() => toggleTask(index)} /> 
 
-        {/*ajoute la class done si elle n'y est pas quand la checbox est cochée  */}
+        {/*ajoute la class done si elle n'y est pas quand la checkbox est cochée  */}
                     <span
                      className={task.done ? "done" : ""}
                     >
@@ -62,6 +64,12 @@ export function TaskList() {
             ))}
 
                 </ul>
+               
+        </div>
+
+        <div>
+          
+          <RemoveTask tasks={tasks} setTasks={setTasks}  />
         </div>
 
     </section>
